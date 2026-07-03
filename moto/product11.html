@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Fog Lamp | Moto Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body class="bg-dark text-white"><div class="top-header fixed-top">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 d-flex left-info">
+                    <a href="tel:+919876543210"><i class="fa fa-phone"></i> +91 9876543210</a>
+                    <a href="mailto:support@ridexgarage.com"><i class="fa fa-envelope"></i> support@ridexgarage.com</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center shipping-text">
+                    Free Shipping on orders above ₹999
+                </div>
+                <div class="col-lg-4 col-md-4 text-right right-info">
+                    <a href="shop.html#products"><i class="fa fa-map-marker"></i> Track Order</a>
+                    <a href="login.html"><i class="fa fa-user"></i> Login </a>
+                    <a href="register.html"><i class="fa fa-user"></i>Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Moto Hub Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parts.html">PARTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">ACCESSORIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">BRANDS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="garage.html">GARAGE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="header-icons">
+                    <a href="shop.html#products">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="shop.html#products" class="icon-box">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="badge-count">0</span>
+                    </a>
+                    <a href="cart.html" class="icon-box">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span class="badge-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-4">
+        <button type="button" class="btn btn-outline-light mb-4" onclick="window.history.back()">
+            <i class="fa fa-arrow-left"></i> Back
+        </button>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-2 thumbs">
+                        <img src="images/light.png" class="thumb active">
+                        <img src="images/light.png" class="thumb">
+                        <img src="images/light.png" class="thumb">
+                        <img src="images/light.png" class="thumb">
+                    </div>
+                    <div class="col-10">
+                        <div class="product-box">
+                            <img id="mainImage" src="images/light.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <span class="badge bg-danger">BEST SELLER</span>
+                <h2 class="mt-2">Fog Lamp<br>for Enhanced Visibility</h2>
+                <div class="text-warning mb-3"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> (19 Reviews)</div>
+                <h3>₹1,799 <del class="text-secondary fs-5">₹2,249</del> <span class="badge bg-danger">-20%</span></h3>
+                <ul>
+                    <li>Boosts visibility in fog and rain</li>
+                    <li>Wide-angle beam pattern</li>
+                    <li>Durable weatherproof housing</li>
+                    <li>Easy mounting on most bikes</li>
+                </ul>
+                <select class="form-select bg-dark text-white mb-3">
+                    <option>Yamaha R15 V4</option>
+                    <option>KTM RC 200</option>
+                </select>
+                <div class="mb-3">
+                    <button class="btn btn-outline-light color active">Black</button>
+                    <button class="btn btn-outline-light color">Silver</button>
+                    <button class="btn btn-outline-light color">Titanium</button>
+                </div>
+                <div class="qty mb-3">
+                    <button id="minus" class="btn btn-secondary">-</button>
+                    <input id="qty" value="1" readonly>
+                    <button id="plus" class="btn btn-secondary">+</button>
+                </div>
+                <button class="btn btn-danger add-to-cart">Add To Cart</button>
+                <button class="btn btn-outline-light buy-now">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="feature-wrapper">
+            <div class="row g-0">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="content"><h5>100% Genuine Parts</h5><p>No compromise with quality</p></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="content"><h5>Fast & Free Delivery</h5><p>On orders above ₹999</p></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+                        <div class="content"><h5>Easy Returns</h5><p>Hassle free returns</p></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box border-end-0">
+                        <div class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                        <div class="content"><h5>Secure Payments</h5><p>100% protected payments</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="product-section py-5">
+        <div class="container">
+            <ul class="nav nav-tabs custom-tabs" id="productTab" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#description">DESCRIPTION</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#specification">SPECIFICATIONS</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#review">REVIEWS (19)</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#shipping">SHIPPING & RETURNS</button>
+                </li>
+            </ul>
+            <div class="tab-content mt-4">
+                <div class="tab-pane fade show active" id="description">
+                    <div class="detail-box">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h4>Fog Lamp</h4>
+                                <p>A fog lamp designed to improve visibility during poor weather conditions.</p>
+                                <p>Produces a wide, low beam to cut through fog and rain more effectively.</p>
+                                <ul>
+                                    <li><i class="fa-regular fa-circle-check"></i> Wider beam spread</li>
+                                    <li><i class="fa-regular fa-circle-check"></i> Durable waterproof design</li>
+                                    <li><i class="fa-regular fa-circle-check"></i> Quick installation</li>
+                                    <li><i class="fa-regular fa-circle-check"></i> Enhanced road visibility</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="images/light.png" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="specification">
+                    <div class="detail-box">
+                        <h4>Specifications</h4>
+                        <table class="table table-dark table-bordered">
+                            <tr><th>Type</th><td>LED</td></tr>
+                            <tr><th>Beam</th><td>Wide angle</td></tr>
+                            <tr><th>Compatibility</th><td>Most motorcycles</td></tr>
+                            <tr><th>Warranty</th><td>1 Year</td></tr>
+                            <tr><th>Country</th><td>India</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="review">
+                    <div class="detail-box">
+                        <h4>Customer Reviews</h4>
+                        <div class="review">★★★★★ Really helps in foggy weather</div>
+                        <hr>
+                        <div class="review">★★★★☆ Strong and clear beam</div>
+                        <hr>
+                        <div class="review">★★★★★ Easy to mount on my bike</div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="shipping">
+                    <div class="detail-box">
+                        <h4>Shipping & Returns</h4>
+                        <ul>
+                            <li>Free Shipping Above ₹999</li>
+                            <li>Delivery in 3-5 Working Days</li>
+                            <li>Easy 7 Days Return Policy</li>
+                            <li>Cash On Delivery Available</li>
+                            <li>100% Secure Packaging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="club-section">
+        <div class="container">
+            <div class="club-banner">
+                <div class="row align-items-center">
+                    <div class="col-lg-4"><div class="club-image"><img src="images/rider.png" alt=""></div></div>
+                    <div class="col-lg-5"><div class="club-content"><h2>JOIN <span>RIDEX</span> RIDERS CLUB</h2><p>Get Exclusive Discounts, Early Access to New Arrivals and Special Offers.</p></div></div>
+                    <div class="col-lg-3 text-lg-end text-center"><a href="#" class="join-btn">JOIN NOW</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+                    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/logo.png" class="footer-logo" alt="">
+                    <p class="footer-text">
+                        Premium Bike Parts & Accessories
+                        For Every Rider.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="shop.html#products">Parts</a></li>
+                        <li><a href="index.html#brands">Categories</a></li>
+                        <li><a href="mailto:support@ridexgarage.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CATEGORIES</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Engine Parts</a></li>
+                        <li><a href="shop.html#products">Brakes</a></li>
+                        <li><a href="shop.html#products">Tyres</a></li>
+                        <li><a href="shop.html#products">Chains</a></li>
+                        <li><a href="shop.html#products">Helmets</a></li>
+                        <li><a href="shop.html#products">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CUSTOMER SERVICE</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Track Order</a></li>
+                        <li><a href="shop.html#products">Returns</a></li>
+                        <li><a href="shop.html#products">Privacy Policy</a></li>
+                        <li><a href="shop.html#products">Terms & Conditions</a></li>
+                        <li><a href="shop.html#products">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h5>CONTACT</h5>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker"></i> Ranchi, Jharkhand</li>
+                        <li><i class="fa fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fa fa-envelope"></i> support@ridexgarage.com</li>
+                        <li><i class="fa fa-clock-o"></i> Mon - Sat : 9:00 AM - 8:00 PM</li>
+                    </ul>
+                    <h6 class="payment-title">PAYMENT METHODS</h6>
+                    <img src="images/visacard.jpeg" class="payment-img" alt="">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">© 2025 RIDEX GARAGE. ALL RIGHTS RESERVED.</div>
+                    <div class="col-md-6 text-md-right"><a href="shop.html#products">Privacy Policy</a> | <a href="shop.html#products">Terms & Conditions</a></div>
+                </div>
+            </div>
+        </div>
+        <a href="#top" class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    
+    <script src="js/script.js"></script>
+    <script src="js/layout.js"></script></body>
+
+</html>
+
+
+
+
+
+
+
+
+

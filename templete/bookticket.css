@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.booking-header {
+    padding: 80px 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, .7),
+            rgba(0, 0, 0, .7)),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+    background-size: cover;
+    background-position: center;
+}
+
+.booking-header h1 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.booking-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+}
+
+.summary-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    position: sticky;
+    top: 20px;
+}
+
+.form-control,
+.form-select {
+    background: #1b1b1b;
+    color: white;
+    border: 1px solid #333;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #1b1b1b;
+    color: white;
+    box-shadow: none;
+    border-color: #dc3545;
+}
+
+.btn-danger {
+    background: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #bb2d3b;
+}

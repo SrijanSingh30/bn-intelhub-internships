@@ -1,0 +1,1013 @@
+﻿/*==============================
+Google Font
+===============================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/*==============================
+Hero Section
+===============================*/
+
+.hero {
+    background: url("images/1st\ bike.png") center center/cover no-repeat;
+    min-height: 650px;
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .82);
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 68px;
+    font-weight: 800;
+    line-height: 78px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.hero h1 span {
+    color: #e21d23;
+}
+
+.sub-text {
+    color: #d4d4d4;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+/*==============================
+Service List
+===============================*/
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.service-list .item {
+    width: 50%;
+    margin-bottom: 18px;
+    color: #ddd;
+    font-size: 15px;
+}
+
+.service-list i {
+    color: #e31d24;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/*==============================
+Buttons
+===============================*/
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn-red {
+    display: inline-block;
+    background: #e21d23;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: .4s;
+}
+
+.btn-red:hover {
+    background: #c31419;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-dark {
+    display: inline-block;
+    border: 1px solid #666;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.btn-dark:hover {
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+}
+
+/*==============================
+Bike
+===============================*/
+
+.bike-img {
+    width: 100%;
+    max-width: 650px;
+    filter: drop-shadow(0 25px 40px rgba(0, 0, 0, .8));
+}
+
+/*==============================
+Features
+===============================*/
+
+.features {
+    background: #111;
+    padding: 45px 0;
+}
+
+.feature-box {
+
+    background: #171717;
+    border: 1px solid #242424;
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+    transition: .4s;
+}
+
+.feature-box:hover {
+
+    transform: translateY(-8px);
+    border-color: #e21d23;
+}
+
+.feature-box i {
+
+    color: #e21d23;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.feature-box h4 {
+
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.feature-box p {
+
+    color: #bdbdbd;
+    line-height: 28px;
+    margin: 0;
+}
+
+/*==============================
+Responsive
+===============================*/
+
+@media(max-width:991px) {
+
+    .hero {
+
+        text-align: center;
+    }
+
+    .hero h1 {
+
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .service-list .item {
+
+        width: 100%;
+    }
+
+    .buttons {
+
+        margin-bottom: 40px;
+    }
+
+    .bike-img {
+
+        margin-top: 40px;
+    }
+
+    .feature-box {
+
+        margin-bottom: 25px;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .hero {
+
+        min-height: auto;
+    }
+
+    .overlay {
+
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .sub-text {
+
+        font-size: 16px;
+    }
+
+    .btn-red,
+    .btn-dark {
+
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #111;
+}
+
+.services {
+    width: 100%;
+    padding: 60px 40px;
+    background: #111;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title h2 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.title h2 span {
+    color: #e60012;
+}
+
+.title p {
+    color: #c7c7c7;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.service-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 220px;
+    background: #161616;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .4s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #e60012;
+    box-shadow: 0 0 15px rgba(255, 0, 0, .3);
+}
+
+.image {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    background: #d60000;
+    border-radius: 50%;
+    border: 5px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 140px;
+    left: 20px;
+}
+
+.icon i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.content {
+    padding: 45px 20px 20px;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.content p {
+    color: #bfbfbf;
+    font-size: 15px;
+    line-height: 25px;
+    min-height: 65px;
+}
+
+.content small {
+    color: #ff2d2d;
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+.content h4 {
+    color: #fff;
+    font-size: 33px;
+    margin: 10px 0 20px;
+}
+
+.content a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 12px;
+    border-radius: 4px;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.content a:hover {
+    background: #d60000;
+    border-color: #d60000;
+}
+
+/* Responsive */
+
+@media(max-width:1200px) {
+
+    .service-box {
+        justify-content: center;
+    }
+
+    .card {
+        width: 300px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .services {
+        padding: 40px 15px;
+    }
+
+    .title h2 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+}
+
+.slider {
+    position: relative;
+}
+
+.service-box {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.service-box::-webkit-scrollbar {
+    display: none;
+}
+
+.prev,
+.next {
+
+    position: absolute;
+    top: -60px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    background: #1b1b1b;
+    color: #fff;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    border: 1px solid #444;
+
+    transition: .3s;
+
+}
+
+.prev {
+
+    right: 50px;
+
+}
+
+.next {
+
+    right: 0;
+
+}
+
+.prev:hover,
+.next:hover {
+
+    background: #d60000;
+
+    border-color: #d60000;
+
+}
+
+.choose-us {
+
+    width: 100%;
+    background: #111;
+    padding: 60px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+
+}
+
+.choose-left {
+
+    width: 28%;
+
+}
+
+.choose-left h2 {
+
+    color: #fff;
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 700;
+
+}
+
+.choose-left span {
+
+    color: #e00000;
+
+}
+
+.choose-left p {
+
+    color: #c8c8c8;
+    margin: 20px 0 30px;
+    line-height: 28px;
+    font-size: 15px;
+
+}
+
+.choose-left a {
+
+    display: inline-block;
+    text-decoration: none;
+    background: #e00000;
+    color: #fff;
+    padding: 14px 35px;
+    font-weight: bold;
+    transition: .3s;
+
+}
+
+.choose-left a:hover {
+
+    background: #fff;
+    color: #111;
+
+}
+
+.choose-right {
+
+    width: 72%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+.box {
+
+    background: #161616;
+
+    border: 1px solid #2d2d2d;
+
+    text-align: center;
+
+    padding: 35px 15px;
+
+    border-radius: 6px;
+
+    transition: .3s;
+
+}
+
+.box:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #e00000;
+
+}
+
+.box .icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border: 2px solid #e00000;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #e00000;
+
+    font-size: 22px;
+
+}
+
+.box h3 {
+
+    color: #fff;
+
+    margin-top: 20px;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+}
+
+.box p {
+
+    color: #bfbfbf;
+
+    margin-top: 10px;
+
+    font-size: 15px;
+
+}
+
+@media(max-width:992px) {
+
+    .choose-us {
+
+        flex-direction: column;
+
+    }
+
+    .choose-left,
+    .choose-right {
+
+        width: 100%;
+
+    }
+
+    .choose-right {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .choose-right {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .choose-left h2 {
+
+        font-size: 30px;
+
+    }
+
+}
+
+/*==========================
+      SERVICE PACKAGE
+==========================*/
+
+.packages {
+    width: 100%;
+    background: #111;
+    padding: 80px 50px;
+}
+
+.package-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.package-title h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.package-title span {
+    color: #e30613;
+}
+
+.package-title p {
+    color: #bbb;
+    margin-top: 10px;
+}
+
+.package-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    width: 330px;
+    background: #191919;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: .4s;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    border-color: #e30613;
+    box-shadow: 0 10px 25px rgba(255, 0, 0, .25);
+}
+
+.package-card.active {
+    border: 2px solid #e30613;
+}
+
+.popular {
+    position: absolute;
+    top: 18px;
+    right: -40px;
+    width: 170px;
+    background: #e30613;
+    color: #fff;
+    text-align: center;
+    transform: rotate(45deg);
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.bike-img {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+
+.bike-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.package-card:hover img {
+    transform: scale(1.08);
+}
+
+.package-card h3 {
+    color: #fff;
+    text-align: center;
+    margin: 25px 0;
+    font-size: 28px;
+}
+
+.package-card ul {
+    list-style: none;
+    padding: 0 30px;
+}
+
+.package-card ul li {
+    color: #ccc;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+.package-card ul li i {
+    color: #e30613;
+    margin-right: 10px;
+}
+
+.price-area {
+    padding: 25px;
+    text-align: center;
+}
+
+.price-area h4 {
+    color: #fff;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.price-area a {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    text-decoration: none;
+    background: #e30613;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.price-area a:hover {
+    background: #fff;
+    color: #111;
+}
+
+/*=========================
+      BOOKING FORM
+=========================*/
+
+.booking-form {
+    width: 100%;
+    max-width: 1150px;
+    margin: 70px auto 0;
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.booking-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.booking-title h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.booking-title p {
+    color: #aaa;
+    font-size: 15px;
+}
+
+.booking-form form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    flex: 1;
+    position: relative;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: #e30613;
+    font-size: 16px;
+}
+
+.input-box input,
+.input-box select {
+
+    width: 100%;
+    height: 55px;
+
+    background: #111;
+
+    border: 1px solid #333;
+
+    border-radius: 5px;
+
+    color: #fff;
+
+    padding-left: 50px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+.input-box input:focus,
+.input-box select:focus {
+
+    border-color: #e30613;
+
+}
+
+.location {
+
+    margin-bottom: 25px;
+
+}
+
+.booking-form button {
+
+    width: 100%;
+
+    height: 55px;
+
+    background: #e30613;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.booking-form button:hover {
+
+    background: #fff;
+
+    color: #111;
+
+}
+
+.secure {
+
+    text-align: center;
+
+    color: #bbb;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+}
+
+.secure i {
+
+    color: #e30613;
+
+    margin-right: 8px;
+
+}
+
+.workshop {
+    background: #111;
+    padding: 60px 40px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #333;
+}
+
+.section-title h2 {
+    color: #fff;
+    font-size: 38px;
+    margin: 0;
+}
+
+.section-title span {
+    color: #e30613;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.gallery-item {
+    height: 140px;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover {
+    border-color: #e30613;
+}

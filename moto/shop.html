@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Moto Hub</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="Shop.css">
+
+
+</head>
+
+<body id="top">
+
+    <div class="top-header fixed-top">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 d-flex left-info">
+                    <a href="tel:+919876543210"><i class="fa fa-phone"></i> +91 9876543210</a>
+                    <a href="mailto:support@ridexgarage.com"><i class="fa fa-envelope"></i> support@ridexgarage.com</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center shipping-text">
+                    Free Shipping on orders above ₹999
+                </div>
+                <div class="col-lg-4 col-md-4 text-right right-info">
+                    <a href="shop.html#products"><i class="fa fa-map-marker"></i> Track Order</a>
+                    <a href="login.html"><i class="fa fa-user"></i> Login </a>
+                    <a href="register.html"><i class="fa fa-user"></i>Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Moto Hub Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parts.html">PARTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">ACCESSORIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">BRANDS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="garage.html">GARAGE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="header-icons">
+                    <a href="shop.html#products">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="shop.html#products" class="icon-box">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="badge-count">0</span>
+                    </a>
+                    <a href="cart.html" class="icon-box">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span class="badge-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid py-4">
+
+        <div class="row">
+
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+
+                <div class="filter-box">
+                    <h6 class="filter-title">CATEGORIES</h6>
+
+                    <ul class="category-list">
+                        <li><button class="category-btn active" data-category="all">All Products
+                                <span>(12)</span></button></li>
+                        <li><button class="category-btn" data-category="engine">Engine Parts <span>(3)</span></button>
+                        </li>
+                        <li><button class="category-btn" data-category="brakes">Brakes <span>(2)</span></button></li>
+                        <li><button class="category-btn" data-category="chains">Chains & Sprockets
+                                <span>(2)</span></button></li>
+                        <li><button class="category-btn" data-category="tyres">Tyres <span>(2)</span></button></li>
+                        <li><button class="category-btn" data-category="lights">Lights <span>(2)</span></button></li>
+                        <li><button class="category-btn" data-category="helmets">Helmets <span>(1)</span></button></li>
+                    </ul>
+                </div>
+
+                <div class="filter-box mt-4">
+                    <h6 class="filter-title">FILTER BY PRICE</h6>
+
+                    <input type="range" id="priceRange" class="custom-range" min="499" max="5000" step="100" value="5000">
+                    <div class="d-flex justify-content-between text-white small mt-2">
+                        <span>₹499</span>
+                        <span id="priceValue">₹5,000</span>
+                    </div>
+
+                    <button class="btn btn-danger btn-block mt-3" id="applyFilters" type="button">
+                        FILTER
+                    </button>
+                </div>
+
+                <div class="filter-box mt-4">
+                    <h6 class="filter-title">BRANDS</h6>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="b1">
+                        <label class="custom-control-label" for="b1">Yamaha</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="b2">
+                        <label class="custom-control-label" for="b2">KTM</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="b3">
+                        <label class="custom-control-label" for="b3">Honda</label>
+                    </div>
+
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="b4">
+                        <label class="custom-control-label" for="b4">ROYAL ENFIELD</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="b5">
+                        <label class="custom-control-label" for="b5">TVS</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="b6">
+                        <label class="custom-control-label" for="b6">BAJAJ</label>
+                    </div>
+                    <a href="shop.html#products"> VIEW MORE+</a>
+                </div>
+
+
+                <div class="rating-box">
+
+                    <h5 class="rating-title">RATING</h5>
+
+                    <ul class="rating-list">
+
+                        <li>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            (120)
+                        </li>
+
+                        <li>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            (85)
+                        </li>
+
+                        <li>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            (45)
+                        </li>
+
+                        <li>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            (12)
+                        </li>
+
+                        <li>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            (4)
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="service-box">
+
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-shield"></i>
+                        </div>
+
+                        <div class="service-content">
+                            <h6>100% Genuine Products</h6>
+                            <p>No Compromise with Quality</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-truck"></i>
+                        </div>
+
+                        <div class="service-content">
+                            <h6>Fast & Free Delivery</h6>
+                            <p>On orders above ₹999</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-refresh"></i>
+                        </div>
+
+                        <div class="service-content">
+                            <h6>Easy Returns</h6>
+                            <p>Hassle free returns</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item border-0">
+                        <div class="service-icon">
+                            <i class="fa fa-lock"></i>
+                        </div>
+
+                        <div class="service-content">
+                            <h6>Secure Payments</h6>
+                            <p>100% protected payments</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product Area -->
+            <div class="col-lg-9" id="products">
+
+                <div class="top-bar mb-4">
+                    <span id="resultsCount">Showing 12 of 12 results</span>
+
+                    <select class="custom-select sort-box" id="sortSelect">
+                        <option value="popularity">Sort by Popularity</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+
+                <div class="row" id="productGrid">
+                    <!-- Static product cards (no JavaScript) -->
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/engine.png" class="img-fluid product-img" alt="Engine Kit">
+                            <div>
+                                <h6>Engine Kit</h6>
+                                <p class="product-meta">MotoHub • Engine</p>
+                                <div class="price">₹1,499 <span>₹1,874</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product1.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product1.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/engine.png" class="img-fluid product-img" alt="Spark Plug Set">
+                            <div>
+                                <h6>Spark Plug Set</h6>
+                                <p class="product-meta">MotoHub • Engine</p>
+                                <div class="price">₹1,199 <span>₹1,499</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product2.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product2.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/engine.png" class="img-fluid product-img" alt="Gasket Repair Kit">
+                            <div>
+                                <h6>Gasket Repair Kit</h6>
+                                <p class="product-meta">MotoHub • Engine</p>
+                                <div class="price">₹999 <span>₹1,249</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product3.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product3.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/break.jpeg" class="img-fluid product-img" alt="Disc Brake Set">
+                            <div>
+                                <h6>Disc Brake Set</h6>
+                                <p class="product-meta">MotoHub • Brakes</p>
+                                <div class="price">₹2,499 <span>₹3,124</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product4.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product4.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/break.jpeg" class="img-fluid product-img" alt="Brake Pad Pack">
+                            <div>
+                                <h6>Brake Pad Pack</h6>
+                                <p class="product-meta">MotoHub • Brakes</p>
+                                <div class="price">₹1,499 <span>₹1,874</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product5.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product5.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/chain.jpeg" class="img-fluid product-img" alt="Drive Chain Kit">
+                            <div>
+                                <h6>Drive Chain Kit</h6>
+                                <p class="product-meta">MotoHub • Chains</p>
+                                <div class="price">₹1,899 <span>₹2,374</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product6.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product6.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/chain.jpeg" class="img-fluid product-img" alt="Sprocket Set">
+                            <div>
+                                <h6>Sprocket Set</h6>
+                                <p class="product-meta">MotoHub • Chains</p>
+                                <div class="price">₹1,299 <span>₹1,613</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product7.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product7.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/tyre.jpeg" class="img-fluid product-img" alt="Sport Tyre">
+                            <div>
+                                <h6>Sport Tyre</h6>
+                                <p class="product-meta">MotoHub • Tyres</p>
+                                <div class="price">₹2,499 <span>₹3,124</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product8.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product8.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/tyre.jpeg" class="img-fluid product-img" alt="Touring Tyre">
+                            <div>
+                                <h6>Touring Tyre</h6>
+                                <p class="product-meta">MotoHub • Tyres</p>
+                                <div class="price">₹2,399 <span>₹2,999</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product9.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product9.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/light.png" class="img-fluid product-img" alt="LED Headlight">
+                            <div>
+                                <h6>LED Headlight</h6>
+                                <p class="product-meta">MotoHub • Lights</p>
+                                <div class="price">₹2,999 <span>₹3,749</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product10.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product10.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/light.png" class="img-fluid product-img" alt="Fog Lamp">
+                            <div>
+                                <h6>Fog Lamp</h6>
+                                <p class="product-meta">MotoHub • Lights</p>
+                                <div class="price">₹1,799 <span>₹2,249</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product11.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product11.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="product-card">
+                            <span class="discount">-20%</span>
+                            <img src="images/helmet.jpeg" class="img-fluid product-img" alt="Premium Full Face Helmet">
+                            <div>
+                                <h6>Premium Full Face Helmet</h6>
+                                <p class="product-meta">MotoHub • Helmets</p>
+                                <div class="price">₹5,499 <span>₹6,874</span></div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-danger btn-sm btn-block btn-add-cart" type="button" data-product-page="product12.html">ADD TO CART</button>
+                                <a class="btn btn-outline-light btn-sm btn-block" href="product12.html">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav>
+                    <ul class="pagination justify-content-center">
+
+                        <li class="page-item active">
+                            <a class="page-link" href="shop.html">1</a>
+                        </li>
+
+                        <li class="page-item">
+                            <a class="page-link" href="shop.html">2</a>
+                        </li>
+
+                        <li class="page-item">
+                            <a class="page-link" href="shop.html">3</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="modal fade quantity-modal" id="quantityModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Add to Cart</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <img id="qtyModalImage" src="" alt="" class="quantity-modal-image">
+                        <div class="ml-3 text-left">
+                            <h6 id="qtyModalName" class="mb-1"></h6>
+                            <div class="price" id="qtyModalPrice"></div>
+                        </div>
+                    </div>
+
+                    <div class="quantity-controls">
+                        <button type="button" class="qty-btn" id="decreaseQty">-</button>
+                        <input type="number" id="qtyInput" value="1" min="1" max="10">
+                        <button type="button" class="qty-btn" id="increaseQty">+</button>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmQtyAdd">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/logo.png" class="footer-logo" alt="">
+                    <p class="footer-text">
+                        Premium Bike Parts & Accessories
+                        For Every Rider.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="shop.html#products">Parts</a></li>
+                        <li><a href="index.html#brands">Categories</a></li>
+                        <li><a href="mailto:support@ridexgarage.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CATEGORIES</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Engine Parts</a></li>
+                        <li><a href="shop.html#products">Brakes</a></li>
+                        <li><a href="shop.html#products">Tyres</a></li>
+                        <li><a href="shop.html#products">Chains</a></li>
+                        <li><a href="shop.html#products">Helmets</a></li>
+                        <li><a href="shop.html#products">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CUSTOMER SERVICE</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Track Order</a></li>
+                        <li><a href="shop.html#products">Returns</a></li>
+                        <li><a href="shop.html#products">Privacy Policy</a></li>
+                        <li><a href="shop.html#products">Terms & Conditions</a></li>
+                        <li><a href="shop.html#products">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h5>CONTACT</h5>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker"></i> Ranchi, Jharkhand</li>
+                        <li><i class="fa fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fa fa-envelope"></i> support@ridexgarage.com</li>
+                        <li><i class="fa fa-clock-o"></i> Mon - Sat : 9:00 AM - 8:00 PM</li>
+                    </ul>
+                    <h6 class="payment-title">PAYMENT METHODS</h6>
+                    <img src="images/visacard.jpeg" class="payment-img" alt="">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">© 2025 RIDEX GARAGE. ALL RIGHTS RESERVED.</div>
+                    <div class="col-md-6 text-md-right"><a href="shop.html#products">Privacy Policy</a> | <a href="shop.html#products">Terms & Conditions</a></div>
+                </div>
+            </div>
+        </div>
+        <a href="#top" class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </footer>
+    <!-- ================= PRODUCT DETAILS MODAL ================= -->
+
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-dark">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="popupName"></h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="popupImage" src="" alt="" class="img-fluid modal-product-image">
+                    <p id="popupDescription" class="mt-3"></p>
+                    <div class="price" id="popupPrice"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <noscript>
+        <div class="container py-4">
+            <div class="alert alert-info">JavaScript has been removed — dynamic product listing is unavailable. Please use the non-JS product pages.</div>
+        </div>
+    </noscript>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function getCart() { return JSON.parse(localStorage.getItem('motoCart') || '[]'); }
+        function saveCart(cart) { localStorage.setItem('motoCart', JSON.stringify(cart)); }
+        function updateCartCount() { const count = getCart().reduce((sum, item) => sum + (item.quantity || 1), 0); document.querySelectorAll('.badge-count, [data-cart-count]').forEach(el => { el.textContent = count; }); }
+        function parsePrice(text) { const match = text.match(/₹\s*([0-9,]+)/); return match ? Number(match[1].replace(/,/g, '')) : 0; }
+        function addItemToCart(card) {
+            const name = card.querySelector('h6')?.innerText.trim() || 'Product';
+            const priceText = card.querySelector('.price')?.innerText || '';
+            const price = parsePrice(priceText);
+            const image = card.querySelector('img')?.src || '';
+            const cart = getCart();
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.quantity = (existing.quantity || 1) + 1;
+            } else {
+                cart.push({ id: name.replace(/\s+/g, '-').toLowerCase(), name, price, image, quantity: 1 });
+            }
+            saveCart(cart);
+            updateCartCount();
+        }
+
+        const priceRange = document.getElementById('priceRange');
+        const priceValue = document.getElementById('priceValue');
+        const resultsCount = document.getElementById('resultsCount');
+        const productItems = Array.from(document.querySelectorAll('#productGrid > .col-lg-3'));
+
+        if (priceRange) {
+            priceRange.addEventListener('input', () => {
+                const activeMaxPrice = Number(priceRange.value);
+                if (priceValue) {
+                    priceValue.textContent = `₹${activeMaxPrice.toLocaleString()}`;
+                }
+            });
+        }
+
+        document.querySelectorAll('.btn-add-cart').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const card = event.currentTarget.closest('.product-card');
+                if (!card) return;
+                addItemToCart(card);
+                const originalText = event.currentTarget.innerText;
+                event.currentTarget.innerText = 'Added';
+                event.currentTarget.disabled = true;
+                setTimeout(() => {
+                    event.currentTarget.innerText = originalText;
+                    event.currentTarget.disabled = false;
+                }, 1200);
+            });
+        });
+        updateCartCount();
+        if (resultsCount) {
+            resultsCount.textContent = `Showing ${productItems.length} of ${productItems.length} results`;
+        }
+    </script>
+
+    <script src="js/layout.js"></script></body>
+
+</html>
+
+
+
+
+

@@ -1,0 +1,1056 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto Hub</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/header-icons.css">
+    
+</head>
+<div class="top-header fixed-top">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 d-flex left-info">
+                    <a href="tel:+919876543210"><i class="fa fa-phone"></i> +91 9876543210</a>
+                    <a href="mailto:support@ridexgarage.com"><i class="fa fa-envelope"></i> support@ridexgarage.com</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center shipping-text">
+                    Free Shipping on orders above ₹999
+                </div>
+                <div class="col-lg-4 col-md-4 text-right right-info">
+                    <a href="shop.html#products"><i class="fa fa-map-marker"></i> Track Order</a>
+                    <a href="login.html"><i class="fa fa-user"></i> Login </a>
+                    <a href="register.html"><i class="fa fa-user"></i>Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Moto Hub Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parts.html">PARTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">ACCESSORIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">BRANDS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="garage.html">GARAGE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="header-icons">
+                    <a href="shop.html#products">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="shop.html#products" class="icon-box">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="badge-count">0</span>
+                    </a>
+                    <a href="cart.html" class="icon-box">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span class="badge-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero-section">
+        <div class="container-fluid">
+
+
+
+            <div class="container">
+                <div class="row align-items-center">
+
+
+                    <div class="col-lg-5 hero-content">
+                        <div id="heroSlides"></div>
+                        <div class="hero-controls">
+                            <button class="slider-btn prev" type="button" aria-label="Previous slide">
+                                <i class="fa fa-chevron-left"></i>
+                            </button>
+                            <div class="slider-dots" id="heroDots"></div>
+                            <button class="slider-btn next" type="button" aria-label="Next slide">
+                                <i class="fa fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 text-center position-relative">
+                        <div class="sale-badge" id="saleBadge">
+                            <small>UP TO</small>
+                            <span id="salePercent">40%</span>
+                            <strong>OFF SALE</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <section class="brand-section" id="brands">
+        <div class="container">
+            <div class="row align-items-center text-center">
+
+                <div class="col">
+                    <img src="images/yamaha.png" class="brand-logo" alt="Yamaha">
+                </div>
+
+                <div class="col">
+                    <img src="images/ktm.png" class="brand-logo" alt="KTM">
+                </div>
+
+                <div class="col">
+                    <img src="images/royal enfield.png" class="brand-logo" alt="Royal Enfield">
+                </div>
+
+                <div class="col">
+                    <img src="images/honda.png" class="brand-logo" alt="Honda">
+                </div>
+
+                <div class="col">
+                    <img src="images/tvs.png" class="brand-logo" alt="TVS">
+                </div>
+
+                <div class="col">
+                    <img src="images/bajaj.jpeg" class="brand-logo" alt="Bajaj">
+                </div>
+
+                <div class="col">
+                    <img src="images/suzuki.png" class="brand-logo" alt="Suzuki">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="categories-section py-5">
+        <div class="container-fluid px-5">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">POPULAR CATEGORIES</h2>
+                <a href="parts.html" class="view-link">
+                    View All Categories <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg col-md-3 col-6 mb-4">
+                    <div class="category-card">
+                        <img src="images/engine.png" class="img-fluid">
+                        <h5>ENGINE PARTS</h5>
+                        <a href="shop.html#products">Explore <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-3 col-6 mb-4">
+                    <div class="category-card">
+                        <img src="images/break.jpeg" class="img-fluid">
+                        <h5>BRAKES</h5>
+                        <a href="parts.html">Explore <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-3 col-6 mb-4">
+                    <div class="category-card">
+                        <img src="images/chain.jpeg" class="img-fluid">
+                        <h5>CHAINS</h5>
+                        <a href="parts.html">Explore <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-3 col-6 mb-4">
+                    <div class="category-card">
+                        <img src="images/tyre.jpeg" class="img-fluid">
+                        <h5>TYRES</h5>
+                        <a href="parts.html">Explore <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-3 col-6 mb-4">
+                    <div class="category-card">
+                        <img src="images/light.png" class="img-fluid">
+                        <h5>LIGHTS</h5>
+                        <a href="parts.html">Explore <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-3 col-6 mb-4">
+                    <div class="category-card">
+                        <img src="images/helmet.jpeg" class="img-fluid">
+                        <h5>HELMETS</h5>
+                        <a href="accessories.html">Explore <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="best-seller-section py-5">
+        <div class="container-fluid px-5">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">BEST SELLERS</h2>
+
+                <a href="shop.html" class="view-link">
+                    View All Products <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="row" id="bestSellerGrid"></div>
+
+        </div>
+    </section>
+    <section class="why-choose-section">
+        <div class="container">
+
+            <h2 class="section-heading">
+                WHY CHOOSE MOTO HUB?
+            </h2>
+
+            <div class="row">
+
+        
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box">
+
+                        <div class="icon-box">
+                            <i class="fa fa-cog"></i>
+                        </div>
+
+                        <div class="feature-content">
+                            <h4>GENUINE PARTS</h4>
+                            <p>
+                                100% authentic &
+                                high quality products.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box">
+
+                        <div class="icon-box">
+                            <i class="fa fa-truck"></i>
+                        </div>
+
+                        <div class="feature-content">
+                            <h4>FAST DELIVERY</h4>
+                            <p>
+                                Quick & safe delivery
+                                at your doorstep.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box">
+
+                        <div class="icon-box">
+                            <i class="fa fa-refresh"></i>
+                        </div>
+
+                        <div class="feature-content">
+                            <h4>EASY RETURN</h4>
+                            <p>
+                                7 days easy <br>return
+                                & refund<br> policy.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box">
+
+                        <div class="icon-box">
+                            <i class="fa fa-headphones"></i>
+                        </div>
+
+                        <div class="feature-content">
+                            <h4>SUPPORT 24/7</h4>
+                            <p>
+                                We are here <br>to help
+                                you <br>anytime.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="summer-sale">
+        <div class="container">
+
+            <div class="sale-content">
+
+                <h2>SUMMER RIDER SALE</h2>
+
+                <h3>UP TO 40% OFF</h3>
+
+                <a href="shop.html#products" class="sale-btn">
+                    SHOP NOW
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="new-arrivals py-5">
+        <div class="container-fluid px-lg-5">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">
+                    <span></span>
+                    NEW ARRIVALS
+                </h2>
+
+                <a href="shop.html" class="view-products">
+                    View All Products
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="row">
+
+              
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="arrival-card">
+                        <img src="images/111.jpeg" class="img-fluid">
+                        <h5>Acerbis Handguard</h5>
+                        <p>₹1,199</p>
+                    </div>
+                </div>
+
+              
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="arrival-card">
+                        <img src="images/222.jpeg" class="img-fluid">
+                        <h5>NGK Spark Plug</h5>
+                        <p>₹249</p>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="arrival-card">
+                        <img src="images/555.jpeg" class="img-fluid">
+                        <h5>K&N Air Filter</h5>
+                        <p>₹3,499</p>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="arrival-card">
+                        <img src="images/333.jpeg" class="img-fluid">
+                        <h5>Radiator Guard</h5>
+                        <p>₹1,249</p>
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="arrival-card">
+                        <img src="images/444.jpeg" class="img-fluid">
+                        <h5>Wing Mirror</h5>
+                        <p>₹899</p>
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="arrival-card">
+                        <img src="images/666.jpeg" class="img-fluid">
+                        <h5>Tank Pad</h5>
+                        <p>₹299</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="ktm-banner">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                
+                <div class="col-md-6">
+
+                    <div class="banner-content">
+
+                        <h2>
+                            KTM RC 390
+                        </h2>
+
+                        <h4>
+                            PERFORMANCE ACCESSORIES AVAILABLE
+                        </h4>
+
+                        <a href="shop.html#products" class="explore-btn">
+                            <i class="fa fa-chevron-right"></i>
+                            EXPLORE COLLECTION
+                        </a>
+
+                    </div>
+
+                </div>
+
+              
+                <div class="col-md-6 text-center">
+
+                    <img src="images/2nd bike.png" class="img-fluid ktm-bike" alt="KTM RC 390">
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="container-fluid px-lg-5">
+
+            <div class="row">
+
+               
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+
+                        <img src="images/image.jpeg" class="user-img" alt="">
+
+                        <div class="testimonial-content">
+
+                            <h4>Srijan Singh</h4>
+
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+
+                            <p>
+                                Great quality products and super fast delivery.
+                                Highly recommended!
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+              
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+
+                        <img src="images/image.jpeg" class="user-img" alt="">
+
+                        <div class="testimonial-content">
+
+                            <h4>Aman Singh</h4>
+
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+
+                            <p>
+                                Perfect parts for bike. Performance
+                                a lot. Thanks MOTOHUB!
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+
+                        <img src="images/image.jpeg" class="user-img" alt="">
+
+                        <div class="testimonial-content">
+
+                            <h4>Vikram Patel</h4>
+
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+
+                            <p>
+                                Very reliable store for bike parts.
+                                Genuine products at best prices.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="riders-club-banner">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                
+                <div class="col-lg-6 col-md-7">
+
+                    <div class="club-content">
+
+                        <h2>JOIN MOTOHUB CLUB</h2>
+
+                        <p>
+                            Exclusive Discounts, Early Access to Offers & More.
+                        </p>
+
+                    </div>
+
+                </div>
+
+               
+                <div class="col-lg-3 col-md-3 text-center">
+
+                    <a href="shop.html#products" class="join-btn">
+                        <i class="fa fa-chevron-right"></i>
+                        JOIN NOW
+                    </a>
+
+                </div>
+
+               
+                <div class="col-lg-3 col-md-2 text-right">
+
+                    <img src="images/2nd bike.png" class="img-fluid rider-bike" alt="Bike Rider">
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="latest-blogs py-5">
+        <div class="container-fluid px-lg-5">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="blog-title">
+                    <span></span>
+                    LATEST BLOGS
+                </h2>
+
+                <a href="shop.html#products" class="view-blog-btn">
+                    View All Blogs
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="row">
+
+               
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card">
+
+                        <div class="row no-gutters">
+
+                            <div class="col-5">
+                                <img src="images/bikeee1.jpeg" class="img-fluid blog-img" alt="">
+                            </div>
+
+                            <div class="col-7">
+
+                                <div class="blog-content">
+
+                                    <span class="blog-date">
+                                        15 May 2024
+                                    </span>
+
+                                    <h4>
+                                        Top 10 Must-Have Accessories
+                                        For Every Rider
+                                    </h4>
+
+                                    <a href="shop.html#products">
+                                        Read More
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card">
+
+                        <div class="row no-gutters">
+
+                            <div class="col-5">
+                                <img src="images/bikeee2.jpeg" class="img-fluid blog-img" alt="">
+                            </div>
+
+                            <div class="col-7">
+
+                                <div class="blog-content">
+
+                                    <span class="blog-date">
+                                        10 May 2024
+                                    </span>
+
+                                    <h4>
+                                        How To Maintain Your Bike
+                                        For Long Life
+                                    </h4>
+
+                                    <a href="shop.html#products">
+                                        Read More
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card">
+
+                        <div class="row no-gutters">
+
+                            <div class="col-5">
+                                <img src="images/bikeee1.jpeg" class="img-fluid blog-img" alt="">
+                            </div>
+
+                            <div class="col-7">
+
+                                <div class="blog-content">
+
+                                    <span class="blog-date">
+                                        05 May 2024
+                                    </span>
+
+                                    <h4>
+                                        Best Engine Oils For
+                                        High Performance
+                                    </h4>
+
+                                    <a href="shop.html#products">
+                                        Read More
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="newsletter-instagram">
+        <div class="container-fluid px-lg-5">
+
+            <div class="row">
+
+               
+                <div class="col-lg-6 mb-4">
+                    <div class="newsletter-box">
+
+                        <h2>STAY UPDATED</h2>
+
+                        <p>
+                            Get Latest Deals & Offers
+                            <br>
+                            Directly To Your Inbox.
+                        </p>
+
+                        <form id="newsletterForm">
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="newsletterEmail" placeholder="Enter Your Email" required>
+                                <div class="input-group-append">
+                                    <button class="subscribe-btn" type="submit">
+                                        SUBSCRIBE
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="newsletterMessage" class="newsletter-message"></div>
+                        </form>
+
+                    </div>
+                </div>
+
+             
+                <div class="col-lg-6 mb-4">
+
+                    <div class="instagram-box">
+
+                        <h2>FOLLOW US ON INSTAGRAM</h2>
+
+                        <div class="row no-gutters">
+
+                            <div class="col">
+                                <img src="images/1st bike.png" class="insta-img">
+                            </div>
+
+                            <div class="col">
+                                <img src="images/bikeee1.jpeg" class="insta-img">
+                            </div>
+
+                            <div class="col">
+                                <img src="images/bikeee2.jpeg" class="insta-img">
+                            </div>
+
+                            <div class="col">
+                                <img src="images/2nd bike.png" class="insta-img">
+                            </div>
+
+                            <div class="col">
+                                <img src="images/bikeee1.jpeg" class="insta-img">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+                    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/logo.png" class="footer-logo" alt="">
+                    <p class="footer-text">
+                        Premium Bike Parts & Accessories
+                        For Every Rider.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="shop.html#products">Parts</a></li>
+                        <li><a href="index.html#brands">Categories</a></li>
+                        <li><a href="mailto:support@ridexgarage.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CATEGORIES</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Engine Parts</a></li>
+                        <li><a href="shop.html#products">Brakes</a></li>
+                        <li><a href="shop.html#products">Tyres</a></li>
+                        <li><a href="shop.html#products">Chains</a></li>
+                        <li><a href="shop.html#products">Helmets</a></li>
+                        <li><a href="shop.html#products">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CUSTOMER SERVICE</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Track Order</a></li>
+                        <li><a href="shop.html#products">Returns</a></li>
+                        <li><a href="shop.html#products">Privacy Policy</a></li>
+                        <li><a href="shop.html#products">Terms & Conditions</a></li>
+                        <li><a href="shop.html#products">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h5>CONTACT</h5>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker"></i> Ranchi, Jharkhand</li>
+                        <li><i class="fa fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fa fa-envelope"></i> support@ridexgarage.com</li>
+                        <li><i class="fa fa-clock-o"></i> Mon - Sat : 9:00 AM - 8:00 PM</li>
+                    </ul>
+                    <h6 class="payment-title">PAYMENT METHODS</h6>
+                    <img src="images/visacard.jpeg" class="payment-img" alt="">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">© 2025 RIDEX GARAGE. ALL RIGHTS RESERVED.</div>
+                    <div class="col-md-6 text-md-right"><a href="shop.html#products">Privacy Policy</a> | <a href="shop.html#products">Terms & Conditions</a></div>
+                </div>
+            </div>
+        </div>
+        <a href="#top" class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </footer>
+
+<div class="modal fade" id="homeProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="homeProductTitle"></h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="homeProductImage" src="" alt="" class="img-fluid modal-product-image">
+                <p id="homeProductDesc" class="mt-3"></p>
+                <div class="price" id="homeProductPrice"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const heroSlides = [
+        {
+            title: 'PERFORMANCE<br><span class="red-text">STARTS HERE</span>',
+            subtitle: 'Premium Bike Spare Parts & Accessories',
+            text: 'Genuine parts for every rider. Better performance. Longer life.'
+        },
+        {
+            title: 'RIDE HARD<br><span class="red-text">SHOP SMART</span>',
+            subtitle: 'Fresh arrivals for your next ride',
+            text: 'Find premium helmets, brakes, tyres, and engine parts in one place.'
+        },
+        {
+            title: 'SUMMER RIDER<br><span class="red-text">DEALS LIVE</span>',
+            subtitle: 'Limited-time offers on top accessories',
+            text: 'Upgrade your bike with premium upgrades at unbeatable prices.'
+        }
+    ];
+
+    let currentSlide = 0;
+    const heroSlidesEl = document.getElementById('heroSlides');
+    const heroDotsEl = document.getElementById('heroDots');
+    const salePercentEl = document.getElementById('salePercent');
+
+    function renderHero() {
+        const slide = heroSlides[currentSlide];
+        heroSlidesEl.innerHTML = `
+            <h1 class="hero-slide-title">${slide.title}</h1>
+            <h3>${slide.subtitle}</h3>
+            <p>${slide.text}</p>
+            <div class="hero-btns">
+                <a href="shop.html#products" class="btn-shop">SHOP NOW</a>
+                <a href="index.html#brands" class="btn-brand"><i class="fa fa-chevron-right"></i>EXPLORE BRANDS</a>
+            </div>
+        `;
+        heroDotsEl.innerHTML = heroSlides.map((_, index) => `<span class="${index === currentSlide ? 'active' : ''}" data-index="${index}"></span>`).join('');
+        salePercentEl.textContent = [40, 35, 30][currentSlide];
+    }
+
+    function nextSlide(step = 1) {
+        currentSlide = (currentSlide + step + heroSlides.length) % heroSlides.length;
+        renderHero();
+    }
+
+    document.querySelector('.slider-btn.prev').addEventListener('click', () => nextSlide(-1));
+    document.querySelector('.slider-btn.next').addEventListener('click', () => nextSlide(1));
+    heroDotsEl.addEventListener('click', (event) => {
+        if (event.target.matches('span')) {
+            currentSlide = Number(event.target.dataset.index);
+            renderHero();
+        }
+    });
+    setInterval(() => nextSlide(1), 5000);
+
+    let featuredProducts = [];
+
+    const bestSellerGrid = document.getElementById('bestSellerGrid');
+
+    function formatPrice(value) {
+        return `₹${value.toLocaleString('en-IN')}`;
+    }
+
+    function loadFeaturedProducts() {
+        featuredProducts = [
+            { name: 'Bike Chain Kit', price: 1499, oldPrice: 3199, image: 'images/chain.jpeg', discount: 20, description: 'Durable chain kit for smooth gear shifts and long-lasting performance.' },
+            { name: 'Bike Disc Brake', price: 2499, oldPrice: 3599, image: 'images/break.jpeg', discount: 20, description: 'High-stopping power disc brake for safer and faster braking.' },
+            { name: 'Premium Helmet', price: 5499, oldPrice: 12199, image: 'images/helmet.jpeg', discount: 20, description: 'Full-face helmet with premium comfort and impact protection.' },
+            { name: 'Engine Kit', price: 1499, oldPrice: 2199, image: 'images/engine.png', discount: 20, description: 'Reliable engine component kit designed for long-term performance.' },
+            { name: 'LED Headlight', price: 2499, oldPrice: 3499, image: 'images/light.png', discount: 20, description: 'Bright and efficient headlight for safer night rides.' },
+            { name: 'Sport Tyre', price: 2499, oldPrice: 3199, image: 'images/tyre.jpeg', discount: 20, description: 'Grip-focused sport tyre built for better control and stability.' }
+        ];
+        renderProducts();
+    }
+
+    function renderProducts() {
+        if (!featuredProducts.length) {
+            bestSellerGrid.innerHTML = '<div class="col-12 text-center text-muted">Loading featured products...</div>';
+            return;
+        }
+
+        bestSellerGrid.innerHTML = featuredProducts.map((product) => `
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="product-card">
+                    <span class="discount">-${product.discount}%</span>
+                    <img src="${product.image}" class="img-fluid product-img" alt="${product.name}">
+                    <div class="rating">★★★★★</div>
+                    <h5>${product.name}</h5>
+                    <div class="price">${formatPrice(product.price)} <span>${formatPrice(product.oldPrice)}</span></div>
+                    <div class="btn-group-custom">
+                        <a href="#" class="cart-btn" data-product-name="${product.name}" data-product-price="${product.price}" data-product-image="${product.image}">ADD TO CART</a>
+                        <a href="#" class="view-btn" data-name="${product.name}" data-price="${product.price}" data-oldprice="${product.oldPrice}" data-image="${product.image}" data-description="${product.description}">QUICK VIEW</a>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    bestSellerGrid.addEventListener('click', (event) => {
+        const cartButton = event.target.closest('.cart-btn');
+        if (cartButton) {
+            event.preventDefault();
+            const cart = getCart();
+            const product = {
+                name: cartButton.dataset.productName,
+                price: Number(cartButton.dataset.productPrice || 0),
+                image: cartButton.dataset.productImage || 'images/engine.png',
+                quantity: 1
+            };
+            const existingItem = cart.find(item => item.name === product.name);
+            if (existingItem) {
+                existingItem.quantity = (existingItem.quantity || 1) + 1;
+            } else {
+                cart.push(product);
+            }
+            saveCart(cart);
+            updateCartCount();
+            showCartToast(product.name);
+            return;
+        }
+
+        const viewBtn = event.target.closest('.view-btn');
+        if (!viewBtn) return;
+
+        event.preventDefault();
+        document.getElementById('homeProductTitle').textContent = viewBtn.dataset.name;
+        document.getElementById('homeProductImage').src = viewBtn.dataset.image;
+        document.getElementById('homeProductDesc').textContent = viewBtn.dataset.description;
+        document.getElementById('homeProductPrice').innerHTML = `${formatPrice(Number(viewBtn.dataset.price))} <span>${formatPrice(Number(viewBtn.dataset.oldprice))}</span>`;
+        $('#homeProductModal').modal('show');
+    });
+
+    document.getElementById('newsletterForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const email = document.getElementById('newsletterEmail').value.trim();
+        const message = document.getElementById('newsletterMessage');
+        if (!email) {
+            message.textContent = 'Please enter a valid email address.';
+            message.className = 'newsletter-message error';
+            return;
+        }
+        message.textContent = `Thanks! ${email} is now subscribed to Moto Hub updates.`;
+        message.className = 'newsletter-message success';
+        this.reset();
+    });
+
+    let cartItems = 0;
+    const cartCountEl = document.getElementById('cartCount');
+    const cartToastEl = document.getElementById('cartToast');
+
+    function getCart() {
+        return JSON.parse(localStorage.getItem('motoCart') || '[]');
+    }
+
+    function saveCart(cart) {
+        localStorage.setItem('motoCart', JSON.stringify(cart));
+    }
+
+    function updateCartCount() {
+        cartItems = getCart().reduce((sum, item) => sum + (item.quantity || 1), 0);
+        cartCountEl.textContent = cartItems;
+    }
+
+    function showCartToast(productName) {
+        const cartToastEl = document.getElementById('cartToast');
+        if (!cartToastEl) return;
+        cartToastEl.textContent = `${productName} added to cart`;
+        cartToastEl.classList.remove('show');
+        void cartToastEl.offsetWidth;
+        cartToastEl.classList.add('show');
+        setTimeout(() => cartToastEl.classList.remove('show'), 1800);
+    }
+
+    updateCartCount();
+    renderHero();
+    loadFeaturedProducts();
+</script>
+<div id="cartToast" class="cart-toast" aria-live="polite"></div>
+    <script src="js/layout.js"></script></body>
+
+</html>
+
+
+
+
+

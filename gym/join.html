@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join FitZone Gym</title>
+
+    <link rel="stylesheet" href="join.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2><i class="fa fa-user-plus"></i> Gym Membership Form</h2>
+
+        <form>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter Your Email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter Phone Number" required>
+            </div>
+
+            <div class="input-group">
+                <label>Age</label>
+                <input type="number" placeholder="Enter Age" required>
+            </div>
+
+            <div class="input-group">
+                <label>Gender</label>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender"> Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender"> Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender"> Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Select Membership Plan</label>
+
+                <select required>
+                    <option>Basic - ₹999</option>
+                    <option>Standard - ₹1499</option>
+                    <option>Premium - ₹2499</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Fitness Goal</label>
+
+                <textarea rows="4" placeholder="Weight Loss, Muscle Gain etc."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Join Gym
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

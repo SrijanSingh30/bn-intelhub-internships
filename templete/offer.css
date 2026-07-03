@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    padding: 100px 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, .7),
+            rgba(0, 0, 0, .7)),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.offer-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: .3s;
+    height: 100%;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+}
+
+.offer-icon {
+    font-size: 50px;
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+.offer-card h2 {
+    color: #dc3545;
+    margin: 15px 0;
+}
+
+.offer-banner {
+    background: linear-gradient(90deg, #8b0000, #dc3545);
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+@media(max-width:768px) {
+
+    .offer-banner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+}

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Moto Hub</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <style>
+    body {
+      background: #0f1117;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: #151922;
+      border: 1px solid #2a3040;
+      border-radius: 12px;
+    }
+
+    .nav-link {
+      color: #fff;
+    }
+
+    .nav-link.active {
+      background: #ff3b30;
+      border-radius: 8px;
+    }
+
+    .badge {
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container py-5">
+    <h2 class="mb-4">Moto Hub Admin Panel</h2>
+    <p class="text-muted">Manage recent orders, inquiries, and service bookings.</p>
+
+    <ul class="nav nav-pills mb-4">
+      <li class="nav-item"><a class="nav-link active" href="#orders" data-toggle="pill">Orders</a></li>
+      <li class="nav-item"><a class="nav-link" href="#inquiries" data-toggle="pill">Inquiries</a></li>
+      <li class="nav-item"><a class="nav-link" href="#bookings" data-toggle="pill">Bookings</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="orders">
+        <div class="card p-3">
+          <h5>Recent Orders</h5>
+          <div id="ordersList"></div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="inquiries">
+        <div class="card p-3">
+          <h5>Customer Inquiries</h5>
+          <div id="inquiriesList"></div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="bookings">
+        <div class="card p-3">
+          <h5>Garage Bookings</h5>
+          <div id="bookingsList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function getStoredData(key) {
+      return JSON.parse(localStorage.getItem(key) || '[]');
+    }
+
+    function saveStoredData(key, data) {
+      localStorage.setItem(key, JSON.stringify(data));
+    }
+
+    function renderSection(containerId, items, renderer, emptyText) {
+      document.getElementById(containerId).innerHTML = items.length ? items.map(renderer).join('') : `<p class="text-muted">${emptyText}</p>`;
+    }
+
+    function loadAdminData() {
+      const orders = getStoredData('motoOrders');
+      const inquiries = getStoredData('motoInquiries');
+      const bookings = getStoredData('motoBookings');
+
+      renderSection('ordersList', orders, order => `
+        <div class="border-bottom py-3">
+          <div class="d-flex justify-content-between"><strong>${order.customerName || 'Guest'}</strong><span class="badge badge-warning">${order.status || 'Pending'}</span></div>
+          <div class="small text-muted">${order.email || ''} • ${order.phone || ''}</div>
+          <div class="small">Items: ${order.items?.length || 0} • Total: ₹${(order.total || 0).toLocaleString('en-IN')}</div>
+          <div class="mt-2">
+            <button class="btn btn-sm btn-outline-light" onclick="updateStatus('${order.id}', 'Confirmed')">Confirm</button>
+            <button class="btn btn-sm btn-outline-light" onclick="updateStatus('${order.id}', 'Shipped')">Ship</button>
+          </div>
+        </div>
+      `, 'No orders yet.');
+
+      renderSection('inquiriesList', inquiries, item => `
+        <div class="border-bottom py-3">
+          <strong>${item.name}</strong>
+          <div class="small text-muted">${item.email} • ${item.subject}</div>
+          <div class="small">${item.message}</div>
+        </div>
+      `, 'No inquiries yet.');
+
+      renderSection('bookingsList', bookings, item => `
+        <div class="border-bottom py-3">
+          <strong>${item.name}</strong>
+          <div class="small text-muted">${item.email} • ${item.phone}</div>
+          <div class="small">Service: ${item.service}</div>
+          <div class="small">Notes: ${item.notes}</div>
+        </div>
+      `, 'No bookings yet.');
+    }
+
+    function updateStatus(id, status) {
+      const orders = getStoredData('motoOrders');
+      const updated = orders.map(order => order.id === id ? { ...order, status } : order);
+      saveStoredData('motoOrders', updated);
+      loadAdminData();
+    }
+
+    window.addEventListener('DOMContentLoaded', loadAdminData);
+  </script>
+  <script src="js/layout.js"></script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brands | Moto Hub</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/header-icons.css">
+</head>
+
+<body id="top">
+  <div class="top-header fixed-top">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-4 col-md-4 d-flex left-info">
+          <a href="tel:+919876543210"><i class="fa fa-phone"></i> +91 9876543210</a>
+          <a href="mailto:support@ridexgarage.com"><i class="fa fa-envelope"></i> support@ridexgarage.com</a>
+        </div>
+        <div class="col-lg-4 col-md-4 text-center shipping-text">
+          Free Shipping on orders above ₹999
+        </div>
+        <div class="col-lg-4 col-md-4 text-right right-info">
+          <a href="shop.html#products"><i class="fa fa-map-marker"></i> Track Order</a>
+          <a href="login.html"><i class="fa fa-user"></i> Login </a>
+          <a href="register.html"><i class="fa fa-user"></i>Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Moto Hub Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+          <li class="nav-item"><a class="nav-link" href="parts.html">PARTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="accessories.html">ACCESSORIES</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">BRANDS</a></li>
+          <li class="nav-item"><a class="nav-link" href="garage.html">GARAGE</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="header-icons">
+          <a href="shop.html#products">
+            <i class="fa fa-search"></i>
+          </a>
+          <a href="shop.html#products" class="icon-box">
+            <i class="fa fa-heart-o"></i>
+            <span class="badge-count">0</span>
+          </a>
+          <a href="cart.html" class="icon-box">
+            <i class="fa fa-shopping-bag"></i>
+            <span class="badge-count" id="cartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="brand-banner">
+
+    <div class="overlay"></div>
+
+    <div class="container h-100">
+
+      <div class="row align-items-center h-100">
+
+        <!-- Left -->
+        <div class="col-lg-6 col-md-6">
+
+          <h1>
+            TOP <span>BRANDS</span>
+          </h1>
+
+          <p class="subtitle">
+            Trusted by Riders. Driven by Quality.
+          </p>
+
+          <div class="breadcrumb-box">
+
+            <a href="#">Home</a>
+
+            <i class="fas fa-angle-right"></i>
+
+            <span>Brands</span>
+
+          </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <div class="col-lg-6 col-md-6 text-right">
+
+          <img src="images/1st bike.png" class="img-fluid bike">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <section class="brands-section">
+
+    <div class="container">
+
+      <div class="heading text-center">
+
+        <h2>
+
+          <span class="line"></span>
+
+          SHOP BY <span class="red">TOP BIKE</span> BRANDS
+
+          <span class="line"></span>
+
+        </h2>
+
+        <p>
+          Choose your bike brand to explore genuine spare parts and accessories.
+        </p>
+
+      </div>
+
+      <div class="row">
+
+        <!-- Card -->
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/yamaha.png">
+
+            <h5>Yamaha</h5>
+
+            <p><span>356</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/ktm.png">
+
+            <h5>KTM</h5>
+
+            <p><span>512</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/royal.png">
+
+            <h5>Royal Enfield</h5>
+
+            <p><span>689</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/honda.png">
+
+            <h5>Honda</h5>
+
+            <p><span>420</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/bajaj.png">
+
+            <h5>Bajaj</h5>
+
+            <p><span>312</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/suzuki.png">
+
+            <h5>Suzuki</h5>
+
+            <p><span>278</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/tvs.png">
+
+            <h5>TVS</h5>
+
+            <p><span>190</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/hero.png">
+
+            <h5>Hero</h5>
+
+            <p><span>245</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/kawasaki.png">
+
+            <h5>Kawasaki</h5>
+
+            <p><span>163</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/bmw.png">
+
+            <h5>BMW</h5>
+
+            <p><span>208</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/triumph.png">
+
+            <h5>Triumph</h5>
+
+            <p><span>154</span> Products</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="brand-card">
+
+            <img src="images/ducati.png">
+
+            <h5>Ducati</h5>
+
+            <p><span>188</span> Products</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <section class="category-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>POPULAR CATEGORIES BY BRAND</h2>
+
+      </div>
+
+      <div class="row">
+
+        <!-- Card -->
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="category-card">
+
+            <img src="images/engine.png" alt="">
+
+            <h5>Engine Parts</h5>
+
+            <span></span>
+
+          </div>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="category-card">
+
+            <img src="images/brake.png" alt="">
+
+            <h5>Brakes & Suspension</h5>
+
+            <span></span>
+
+          </div>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="category-card">
+
+            <img src="images/exhaust.png" alt="">
+
+            <h5>Exhaust Systems</h5>
+
+            <span></span>
+
+          </div>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="category-card">
+
+            <img src="images/chain.png" alt="">
+
+            <h5>Chains & Sprockets</h5>
+
+            <span></span>
+
+          </div>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="category-card">
+
+            <img src="images/electrical.png" alt="">
+
+            <h5>Electricals</h5>
+
+            <span></span>
+
+          </div>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+
+          <div class="category-card">
+
+            <img src="images/body.png" alt="">
+
+            <h5>Body Parts</h5>
+
+            <span></span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <section class="why-section">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>WHY CHOOSE GENUINE PARTS?</h2>
+      </div>
+
+      <div class="row">
+
+        <!-- Item -->
+        <div class="col-lg col-md-4 col-6 mb-3">
+
+          <div class="why-box">
+
+            <div class="icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+
+            <div class="content">
+              <h5>100% Genuine</h5>
+              <p>Original parts with warranty</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Item -->
+        <div class="col-lg col-md-4 col-6 mb-3">
+
+          <div class="why-box">
+
+            <div class="icon">
+              <i class="fas fa-award"></i>
+            </div>
+
+            <div class="content">
+              <h5>Better Performance</h5>
+              <p>Improves bike performance and mileage</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Item -->
+        <div class="col-lg col-md-4 col-6 mb-3">
+
+          <div class="why-box">
+
+            <div class="icon">
+              <i class="far fa-check-circle"></i>
+            </div>
+
+            <div class="content">
+              <h5>Longer Life</h5>
+              <p>High quality parts for long lasting</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Item -->
+        <div class="col-lg col-md-4 col-6 mb-3">
+
+          <div class="why-box">
+
+            <div class="icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+
+            <div class="content">
+              <h5>Safety First</h5>
+              <p>Designed for rider safety</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Item -->
+        <div class="col-lg col-md-4 col-6 mb-3">
+
+          <div class="why-box">
+
+            <div class="icon">
+              <i class="fas fa-rupee-sign"></i>
+            </div>
+
+            <div class="content">
+              <h5>Value for Money</h5>
+              <p>Best quality at best price</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <div id="toast" class="toast"></div>
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img src="images/logo.png" class="footer-logo" alt="">
+          <p class="footer-text">
+            Premium Bike Parts & Accessories
+            For Every Rider.
+          </p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-youtube-play"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>QUICK LINKS</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="shop.html#products">Parts</a></li>
+            <li><a href="index.html#brands">Categories</a></li>
+            <li><a href="mailto:support@ridexgarage.com">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>CATEGORIES</h5>
+          <ul>
+            <li><a href="shop.html#products">Engine Parts</a></li>
+            <li><a href="shop.html#products">Brakes</a></li>
+            <li><a href="shop.html#products">Tyres</a></li>
+            <li><a href="shop.html#products">Chains</a></li>
+            <li><a href="shop.html#products">Helmets</a></li>
+            <li><a href="shop.html#products">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>CUSTOMER SERVICE</h5>
+          <ul>
+            <li><a href="shop.html#products">Track Order</a></li>
+            <li><a href="shop.html#products">Returns</a></li>
+            <li><a href="shop.html#products">Privacy Policy</a></li>
+            <li><a href="shop.html#products">Terms & Conditions</a></li>
+            <li><a href="shop.html#products">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <h5>CONTACT</h5>
+          <ul class="contact-info">
+            <li><i class="fa fa-map-marker"></i> Ranchi, Jharkhand</li>
+            <li><i class="fa fa-phone"></i> +91 9876543210</li>
+            <li><i class="fa fa-envelope"></i> support@ridexgarage.com</li>
+            <li><i class="fa fa-clock-o"></i> Mon - Sat : 9:00 AM - 8:00 PM</li>
+          </ul>
+          <h6 class="payment-title">PAYMENT METHODS</h6>
+          <img src="images/visacard.jpeg" class="payment-img" alt="">
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6">© 2025 RIDEX GARAGE. ALL RIGHTS RESERVED.</div>
+          <div class="col-md-6 text-md-right"><a href="shop.html#products">Privacy Policy</a> | <a
+              href="shop.html#products">Terms & Conditions</a></div>
+        </div>
+      </div>
+    </div>
+    <a href="#top" class="scroll-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const brandDefinitions = [
+      { name: 'Yamaha', image: 'images/yamaha.png', categories: ['engine', 'chains'] },
+      { name: 'KTM', image: 'images/ktm.png', categories: ['brakes', 'lights'] },
+      { name: 'Royal Enfield', image: 'images/royal enfield.png', categories: ['comfort', 'gear'] },
+      { name: 'Honda', image: 'images/honda.png', categories: ['tyres', 'engine'] }
+    ];
+    const fallbackProducts = [
+      { name: 'Yamaha Grip Set', price: 1399, image: 'images/engine.png', description: 'Performance grip set for stable handling.', category: 'engine' },
+      { name: 'Yamaha Chain Cover', price: 899, image: 'images/chain.jpeg', description: 'Protective cover for everyday wear resistance.', category: 'chains' },
+      { name: 'KTM Brake Pad', price: 1899, image: 'images/break.jpeg', description: 'Sturdy brake pads tuned for high-performance stopping.', category: 'brakes' },
+      { name: 'KTM Headlight', price: 3199, image: 'images/light.png', description: 'Compact LED setup for better visibility.', category: 'lights' },
+      { name: 'RE Tank Pad', price: 799, image: 'images/chain.jpeg', description: 'Classic style protection for your tank.', category: 'comfort' },
+      { name: 'RE Mirror Pair', price: 1299, image: 'images/engine.png', description: 'Robust mirrors made for long touring rides.', category: 'gear' },
+      { name: 'Honda Air Filter', price: 2599, image: 'images/engine.png', description: 'High-flow air filter to keep performance steady.', category: 'engine' },
+      { name: 'Honda Tyre', price: 2499, image: 'images/tyre.jpeg', description: 'Reliable tyre built for everyday comfort.', category: 'tyres' }
+    ];
+    let products = [...fallbackProducts];
+    let currentBrand = brandDefinitions[0].name;
+    const brandList = document.getElementById('brandList');
+    const brandTitle = document.getElementById('brandTitle');
+    const brandProducts = document.getElementById('brandProducts');
+    const toast = document.getElementById('toast');
+
+    function getCart() { return JSON.parse(localStorage.getItem('motoCart') || '[]'); }
+    function saveCart(cart) { localStorage.setItem('motoCart', JSON.stringify(cart)); }
+    function updateCartCount() { const count = getCart().reduce((sum, item) => sum + (item.quantity || 1), 0); document.querySelectorAll('.badge-count, [data-cart-count]').forEach(el => { el.textContent = count; }); }
+    function showToast(message) { toast.textContent = message; toast.classList.add('show'); clearTimeout(showToast.timeout); showToast.timeout = setTimeout(() => toast.classList.remove('show'), 1800); }
+    function addToCart(product) { const cart = getCart(); const existing = cart.find(item => item.name === product.name); if (existing) existing.quantity = (existing.quantity || 1) + 1; else cart.push({ ...product, quantity: 1 }); saveCart(cart); updateCartCount(); showToast(`${product.name} added to cart`); }
+
+    function loadProducts() {
+      products = [...fallbackProducts];
+      renderBrands();
+    }
+
+    function renderBrands() {
+      brandList.innerHTML = brandDefinitions.map(brand => `<button class="brand-chip ${brand.name === currentBrand ? 'active' : ''}" data-brand="${brand.name}">${brand.name}</button>`).join('');
+      const activeBrand = brandDefinitions.find(brand => brand.name === currentBrand) || brandDefinitions[0];
+      const visibleProducts = products.filter(product => activeBrand.categories.includes(product.category)).slice(0, 4);
+      brandTitle.textContent = activeBrand.name;
+      brandProducts.innerHTML = visibleProducts.map(product => `
+        <article class="card">
+          <img src="${product.image}" alt="${product.name}" />
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          <div class="meta"><span class="price">₹${product.price.toLocaleString('en-IN')}</span><span>${activeBrand.name}</span></div>
+          <div class="actions"><button class="primary" data-add="${product.name}">Add to Cart</button></div>
+        </article>
+      `).join('');
+    }
+    brandList.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-brand]');
+      if (button) { currentBrand = button.dataset.brand; renderBrands(); }
+    });
+    brandProducts.addEventListener('click', (event) => {
+      const addBtn = event.target.closest('[data-add]');
+      if (addBtn) {
+        const activeBrand = brandDefinitions.find(brand => brand.name === currentBrand) || brandDefinitions[0];
+        const product = products.find(item => item.name === addBtn.dataset.add);
+        if (product) addToCart({ ...product, brand: activeBrand.name });
+      }
+    });
+    updateCartCount();
+    loadProducts();
+  </script>
+  <script src="js/layout.js"></script>
+</body>
+
+</html>

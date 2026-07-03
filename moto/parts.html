@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parts | Moto Hub</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+  <div class="top-header fixed-top">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 d-flex left-info">
+                    <a href="tel:+919876543210"><i class="fa fa-phone"></i> +91 9876543210</a>
+                    <a href="mailto:support@ridexgarage.com"><i class="fa fa-envelope"></i> support@ridexgarage.com</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center shipping-text">
+                    Free Shipping on orders above ₹999
+                </div>
+                <div class="col-lg-4 col-md-4 text-right right-info">
+                    <a href="shop.html#products"><i class="fa fa-map-marker"></i> Track Order</a>
+                    <a href="login.html"><i class="fa fa-user"></i> Login </a>
+                    <a href="register.html"><i class="fa fa-user"></i>Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Moto Hub Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parts.html">PARTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">ACCESSORIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">BRANDS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="garage.html">GARAGE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="header-icons">
+                    <a href="shop.html#products">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="shop.html#products" class="icon-box">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="badge-count">0</span>
+                    </a>
+                    <a href="cart.html" class="icon-box">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span class="badge-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+  <main class="page-hero">
+    <div class="container">
+      <h1>Premium Parts</h1>
+      <p>Choose from genuine spares engineered for better grip, smooth shifting, and reliable everyday riding.</p>
+      <div class="controls">
+        <input id="searchInput" type="text" placeholder="Search parts" />
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="engine">Engine Parts</option>
+          <option value="brakes">Brakes</option>
+          <option value="chains">Chains</option>
+          <option value="tyres">Tyres</option>
+          <option value="lights">Lights</option>
+        </select>
+      </div>
+    </div>
+  </main>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Featured Parts</h2>
+        <p>Every item is selected for performance and durability.</p>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+  <div class="modal" id="detailsModal">
+    <div class="modal-card">
+      <span class="close" id="closeModal">×</span>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+                  <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/logo.png" class="footer-logo" alt="">
+                    <p class="footer-text">
+                        Premium Bike Parts & Accessories
+                        For Every Rider.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="shop.html#products">Parts</a></li>
+                        <li><a href="index.html#brands">Categories</a></li>
+                        <li><a href="mailto:support@ridexgarage.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CATEGORIES</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Engine Parts</a></li>
+                        <li><a href="shop.html#products">Brakes</a></li>
+                        <li><a href="shop.html#products">Tyres</a></li>
+                        <li><a href="shop.html#products">Chains</a></li>
+                        <li><a href="shop.html#products">Helmets</a></li>
+                        <li><a href="shop.html#products">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CUSTOMER SERVICE</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Track Order</a></li>
+                        <li><a href="shop.html#products">Returns</a></li>
+                        <li><a href="shop.html#products">Privacy Policy</a></li>
+                        <li><a href="shop.html#products">Terms & Conditions</a></li>
+                        <li><a href="shop.html#products">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h5>CONTACT</h5>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker"></i> Ranchi, Jharkhand</li>
+                        <li><i class="fa fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fa fa-envelope"></i> support@ridexgarage.com</li>
+                        <li><i class="fa fa-clock-o"></i> Mon - Sat : 9:00 AM - 8:00 PM</li>
+                    </ul>
+                    <h6 class="payment-title">PAYMENT METHODS</h6>
+                    <img src="images/visacard.jpeg" class="payment-img" alt="">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">© 2025 RIDEX GARAGE. ALL RIGHTS RESERVED.</div>
+                    <div class="col-md-6 text-md-right"><a href="shop.html#products">Privacy Policy</a> | <a href="shop.html#products">Terms & Conditions</a></div>
+                </div>
+            </div>
+        </div>
+        <a href="#top" class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const fallbackProducts = [
+      { name: 'Engine Kit', category: 'engine', price: 1499, image: 'images/engine.png', description: 'Precision-engineered engine components for smoother power delivery.' },
+      { name: 'Disc Brake Set', category: 'brakes', price: 2499, image: 'images/break.jpeg', description: 'High-stopping power braking for safer rides in traffic and on open roads.' },
+      { name: 'Drive Chain Kit', category: 'chains', price: 1899, image: 'images/chain.jpeg', description: 'Durable chain and sprocket set for long-lasting performance.' },
+      { name: 'Sport Tyre', category: 'tyres', price: 2499, image: 'images/tyre.jpeg', description: 'Grip-focused tyre designed for better control and cornering.' },
+      { name: 'LED Headlight', category: 'lights', price: 2999, image: 'images/light.png', description: 'Bright illumination for clear night riding and better visibility.' },
+      { name: 'Handlebar Guard', category: 'engine', price: 1299, image: 'images/helmet.jpeg', description: 'Protected bar guard built to reduce impact and improve durability.' }
+    ];
+    let products = [...fallbackProducts];
+
+    const productGrid = document.getElementById('productGrid');
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const toast = document.getElementById('toast');
+    const detailsModal = document.getElementById('detailsModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalContent = document.getElementById('modalContent');
+
+    function getCart() { return JSON.parse(localStorage.getItem('motoCart') || '[]'); }
+    function saveCart(cart) { localStorage.setItem('motoCart', JSON.stringify(cart)); }
+    function updateCartCount() { const count = getCart().reduce((sum, item) => sum + (item.quantity || 1), 0); document.querySelectorAll('.badge-count, [data-cart-count]').forEach(el => { el.textContent = count; }); }
+    function showToast(message) { toast.textContent = message; toast.classList.add('show'); clearTimeout(showToast.timeout); showToast.timeout = setTimeout(() => toast.classList.remove('show'), 1800); }
+    function addToCart(product) {
+      const cart = getCart();
+      const existing = cart.find(item => item.name === product.name);
+      if (existing) existing.quantity = (existing.quantity || 1) + 1; else cart.push({ ...product, quantity: 1 });
+      saveCart(cart); updateCartCount(); showToast(`${product.name} added to cart`);
+    }
+    function openModal(product) { modalContent.innerHTML = `<h3>${product.name}</h3><p>${product.description}</p><p><strong>Price:</strong> ₹${product.price.toLocaleString('en-IN')}</p><div class="actions"><button class="primary" onclick="window.addToCartFromModal('${product.name}')">Add to Cart</button></div>`; detailsModal.classList.add('open'); }
+    window.addToCartFromModal = (name) => { const product = products.find(item => item.name === name); if (product) addToCart(product); detailsModal.classList.remove('open'); };
+
+    function loadProducts() {
+      products = [...fallbackProducts];
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const query = searchInput.value.trim().toLowerCase();
+      const category = categoryFilter.value;
+      const filtered = products.filter(product => {
+        const matchesQuery = product.name.toLowerCase().includes(query) || (product.description || '').toLowerCase().includes(query);
+        const matchesCategory = category === 'all' || product.category === category;
+        return matchesQuery && matchesCategory;
+      });
+      productGrid.innerHTML = filtered.map(product => `
+        <article class="card">
+          <img src="${product.image}" alt="${product.name}" />
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          <div class="meta"><span class="price">₹${product.price.toLocaleString('en-IN')}</span><span>${product.category}</span></div>
+          <div class="actions">
+            <button class="primary" data-add="${product.name}">Add to Cart</button>
+            <button class="secondary" data-view="${product.name}">View</button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    productGrid.addEventListener('click', (event) => {
+      const addBtn = event.target.closest('[data-add]');
+      const viewBtn = event.target.closest('[data-view]');
+      if (addBtn) { const product = products.find(item => item.name === addBtn.dataset.add); if (product) addToCart(product); }
+      if (viewBtn) { const product = products.find(item => item.name === viewBtn.dataset.view); if (product) openModal(product); }
+    });
+
+    [searchInput, categoryFilter].forEach(input => input.addEventListener('input', renderProducts));
+    closeModal.addEventListener('click', () => detailsModal.classList.remove('open'));
+    detailsModal.addEventListener('click', (event) => { if (event.target === detailsModal) detailsModal.classList.remove('open'); });
+    updateCartCount();
+    loadProducts();
+  </script>
+    <script src="js/layout.js"></script></body>
+
+</html>
+
+
+
+
+

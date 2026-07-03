@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Moto Hub</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+         <div class="top-header fixed-top">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 d-flex left-info">
+                    <a href="tel:+919876543210"><i class="fa fa-phone"></i> +91 9876543210</a>
+                    <a href="mailto:support@ridexgarage.com"><i class="fa fa-envelope"></i> support@ridexgarage.com</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center shipping-text">
+                    Free Shipping on orders above ₹999
+                </div>
+                <div class="col-lg-4 col-md-4 text-right right-info">
+                    <a href="shop.html#products"><i class="fa fa-map-marker"></i> Track Order</a>
+                    <a href="login.html"><i class="fa fa-user"></i> Login </a>
+                    <a href="register.html"><i class="fa fa-user"></i>Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Moto Hub Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parts.html">PARTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">ACCESSORIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">BRANDS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="garage.html">GARAGE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="header-icons">
+                    <a href="shop.html#products">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="shop.html#products" class="icon-box">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="badge-count">0</span>
+                    </a>
+                    <a href="cart.html" class="icon-box">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span class="badge-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="contact-banner">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6">
+                    <h1>CONTACT <span>US</span></h1>
+                    <p>We would love to hear from you. Reach out for product support, orders, or general questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4">
+                    <div class="contact-card">
+                        <h3>Get In Touch</h3>
+                        <ul class="contact-list">
+                            <li><i class="fa fa-map-marker"></i> 45, Motor Street, Delhi, India</li>
+                            <li><i class="fa fa-phone"></i> +91 9876543210</li>
+                            <li><i class="fa fa-envelope"></i> support@ridexgarage.com</li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 mb-4">
+                    <div class="contact-card form-card">
+                        <h3>Send Us a Message</h3>
+                        <form id="inquiryForm">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="6" placeholder="Write your message..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                            <div id="inquiryMessage" class="mt-3"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                     <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/logo.png" class="footer-logo" alt="">
+                    <p class="footer-text">
+                        Premium Bike Parts & Accessories
+                        For Every Rider.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="shop.html#products">Parts</a></li>
+                        <li><a href="index.html#brands">Categories</a></li>
+                        <li><a href="mailto:support@ridexgarage.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CATEGORIES</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Engine Parts</a></li>
+                        <li><a href="shop.html#products">Brakes</a></li>
+                        <li><a href="shop.html#products">Tyres</a></li>
+                        <li><a href="shop.html#products">Chains</a></li>
+                        <li><a href="shop.html#products">Helmets</a></li>
+                        <li><a href="shop.html#products">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>CUSTOMER SERVICE</h5>
+                    <ul>
+                        <li><a href="shop.html#products">Track Order</a></li>
+                        <li><a href="shop.html#products">Returns</a></li>
+                        <li><a href="shop.html#products">Privacy Policy</a></li>
+                        <li><a href="shop.html#products">Terms & Conditions</a></li>
+                        <li><a href="shop.html#products">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h5>CONTACT</h5>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker"></i> Ranchi, Jharkhand</li>
+                        <li><i class="fa fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fa fa-envelope"></i> support@ridexgarage.com</li>
+                        <li><i class="fa fa-clock-o"></i> Mon - Sat : 9:00 AM - 8:00 PM</li>
+                    </ul>
+                    <h6 class="payment-title">PAYMENT METHODS</h6>
+                    <img src="images/visacard.jpeg" class="payment-img" alt="">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">© 2025 RIDEX GARAGE. ALL RIGHTS RESERVED.</div>
+                    <div class="col-md-6 text-md-right"><a href="shop.html#products">Privacy Policy</a> | <a href="shop.html#products">Terms & Conditions</a></div>
+                </div>
+            </div>
+        </div>
+        <a href="#top" class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const inquiryForm = document.getElementById('inquiryForm');
+        const inquiryMessage = document.getElementById('inquiryMessage');
+
+        inquiryForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(inquiryForm);
+            const payload = { id: Date.now().toString(), ...Object.fromEntries(formData.entries()), createdAt: new Date().toISOString() };
+            try {
+                const inquiries = JSON.parse(localStorage.getItem('motoInquiries') || '[]');
+                localStorage.setItem('motoInquiries', JSON.stringify([payload, ...inquiries]));
+                inquiryMessage.textContent = 'Thanks! We received your message and will contact you shortly.';
+                inquiryMessage.style.color = '#2ecc71';
+                inquiryForm.reset();
+            } catch (error) {
+                inquiryMessage.textContent = 'Something went wrong. Please try again later.';
+                inquiryMessage.style.color = '#ff5a5a';
+            }
+        });
+        function getCart() { return JSON.parse(localStorage.getItem('motoCart') || '[]'); }
+        function updateCartCount() { const count = getCart().reduce((sum, item) => sum + (item.quantity || 1), 0); document.querySelectorAll('.badge-count, [data-cart-count]').forEach(el => { el.textContent = count; }); }
+        updateCartCount();
+    </script>
+    <script src="js/layout.js"></script></body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Moto Hub</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f1117, #1a1f2b);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .auth-card {
+      width: min(100%, 440px);
+      background: rgba(21, 25, 34, 0.96);
+      border: 1px solid #2c3444;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-control { background: #0f1117; color: #fff; border: 1px solid #3a4355; }
+    .form-control:focus { background: #0f1117; color: #fff; border-color: #ff3b30; box-shadow: none; }
+    .btn-primary { background: #ff3b30; border: none; width: 100%; }
+    .btn-primary:hover { background: #e62d22; }
+    .message { margin-top: 10px; min-height: 20px; font-size: 0.95rem; }
+    .message.error { color: #ff8a80; }
+    .message.success { color: #81c784; }
+  </style>
+</head>
+<body>
+  <div class="auth-card">
+    <h2>Create account</h2>
+    <p>Join Moto Hub to save your cart and place orders faster.</p>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" class="form-control" required />
+      </div>
+      <button class="btn btn-primary" type="submit">Create account</button>
+    </form>
+    <div id="message" class="message"></div>
+    <div class="auth-links" style="margin-top:14px; font-size:0.95rem;">
+      <span>Already have an account?</span> <a href="login.html" style="color:#ff8a80;">Login</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const message = document.getElementById('message');
+
+    function getUsers() {
+      return JSON.parse(localStorage.getItem('motoUsers') || '[]');
+    }
+
+    function saveUsers(users) {
+      localStorage.setItem('motoUsers', JSON.stringify(users));
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const users = getUsers();
+
+      if (users.some(u => u.email === email)) {
+        message.textContent = 'This email is already registered.';
+        message.className = 'message error';
+        return;
+      }
+
+      users.unshift({ id: Date.now().toString(), name, email, password });
+      saveUsers(users);
+      message.textContent = 'Account created successfully! Please log in.';
+      message.className = 'message success';
+      form.reset();
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 900);
+    });
+  </script>
+    <script src="js/layout.js"></script></body>
+</html>

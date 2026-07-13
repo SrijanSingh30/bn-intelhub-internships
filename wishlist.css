@@ -1,0 +1,57 @@
+body {
+
+    background: #f8f8f8;
+
+}
+
+.wishlist-card {
+
+    background: #fff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+
+}
+
+.wishlist-card img {
+
+    width: 90px;
+
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+}
+
+.wishlist-info {
+
+    flex: 1;
+
+    margin-left: 20px;
+
+}
+
+.wishlist-info h5 {
+
+    font-weight: 600;
+
+}
+
+.wishlist-actions button {
+
+    margin-left: 10px;
+
+}

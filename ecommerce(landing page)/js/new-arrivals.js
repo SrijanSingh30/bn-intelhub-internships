@@ -1,0 +1,4 @@
+const arrivalProducts = [
+    ...products,
+    ...kidsProducts
+];

@@ -682,19 +682,7 @@ ADD TO CART
 
 }
 
-    border-radius: 50%;
-
-    font-size: 12px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-weight: 600;
-
-}
+  
 
 /*============================
 LIST VIEW
@@ -863,4 +851,3 @@ PAGINATION
 }
 
 
-}
